@@ -1,26 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View , ActivityIndicator, FlatList, Alert, RefreshControl, TouchableOpacity} from 'react-native';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { ColorPost } from './src/ColorPost';
+import { Home } from './screens/Home';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello</Text>
-      <View>
-        <Text>
-          Hi
-        </Text>
-      </View>
-      <Text>Open up App.js to start working on your app!</Text>
+  return <View>
+      <Home></Home>
       <StatusBar style="auto" />
     </View>
-  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
